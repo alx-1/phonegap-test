@@ -52,9 +52,10 @@
             <p class="event received">Device is Ready</p>
         </div>
         
-         <form action="http://192.168.4.1/" method="get" id="form1">
-  Texte <input type="text" name="AgitPOV" value="hola"><br>
-  Couleur <input type="text" name="color" value="3"><br>
+         <form action="http://192.168.4.1/" method="post" id="form1">
+  Texte <input type="text" id="monTexte" name="AgitPOV" value="hola"><br>
+  Couleur <input type="text" id="maCouleur" name="color" value="3"><br>
+             
               <input type="button" onclick="myFunction()" value="Submit form">
 </form>
 
@@ -69,7 +70,14 @@
     <script>
 function myFunction() {
     document.getElementById("form1").submit();
-    alert("formulaire envoyé!");
+    
+    var selCouleur = "42";
+    var selMot = "testing";
+    
+    document.getElementById("monTexte").value = selMot;
+    document.getElementById("maCouleur").value = selCouleur;
+    
+    alert("formulaire envoyé! monTexte : "+selMot+" maCouleur : "+selCouleur);
 }
 </script>
 </body>
