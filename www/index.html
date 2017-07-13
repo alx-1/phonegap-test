@@ -52,7 +52,8 @@
             <p class="event received">Device is Ready</p>
         </div>
         
-         <form action="http://192.168.4.1/" method="post" id="form1">
+        <!--<form action="http://192.168.4.1/" method="post" id="form1">-->
+        <form action="http://cociclo.io/AgitPOV/subir2.php" method="post" id="form1">
   Texte <input type="text" id="monTexte" name="AgitPOV" value="hola"><br>
   Couleur <input type="text" id="maCouleur" name="color" value="3"><br>
              
@@ -71,7 +72,7 @@
 function myFunction() {
     document.getElementById("form1").submit();
     
-    var selCouleur = "42";
+    var selCouleur = "2";
     var selMot = "testing";
     
     document.getElementById("monTexte").value = selMot;
